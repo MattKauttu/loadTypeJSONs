@@ -1,0 +1,46 @@
+{
+    "name": "poison",
+    "attacking":
+    {
+        "normal": 1,
+        "fire": 1,
+        "water": 1,
+        "electric": 1,
+        "grass": 2,
+        "ice": 1,
+        "fighting": 1,
+        "poison": 0.5,
+        "ground": 0.5,
+        "flying": 1,
+        "psychic": 1,
+        "bug": 1,
+        "rock": 0.5,
+        "ghost": 0.5,
+        "dragon": 1,
+        "dark": 1,
+        "steel": 0,
+        "fairy": 2
+    },
+    "defending":
+    {
+        "normal": 1,
+        "fire": 1,
+        "water": 1,
+        "electric": 1,
+        "grass": 0.5,
+        "ice": 1,
+        "fighting": 0.5,
+        "poison": 0.5,
+        "ground": 2,
+        "flying": 1,
+        "psychic": 2,
+        "bug": 0.5,
+        "rock": 1,
+        "ghost": 1,
+        "dragon": 1,
+        "dark": 1,
+        "steel": 1,
+        "fairy": 0.5
+    }
+
+}
