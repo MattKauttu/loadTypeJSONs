@@ -1,14 +1,9 @@
+from dataclasses import dataclass
+from models.TypeRelationships import Relationships
 
+
+@dataclass
 class DualType:
-
-    # name
-    # defending relationships
-    #     dictionary
-    #         type - dmgModifier
-
-    def __init__(self, name, coverage, defending):
-        self.name = name
-        self.coverage = coverage
-        self.defending = defending
-
-    pass
+    _type1name: str
+    type2name: str
+    defenses: Relationships

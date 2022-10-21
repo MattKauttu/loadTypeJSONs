@@ -2,7 +2,7 @@
 class BaseType:
 
     # name
-    # defending relationships
+    # defenses relationships
     #     dictionary
     #         type: dmgModifier
 
