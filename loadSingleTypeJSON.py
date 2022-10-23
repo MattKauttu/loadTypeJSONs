@@ -35,9 +35,9 @@ def set_relationships(parsed_json):
 
     for i in range(len(parsed_json)):
 
-        for i in range(2):
+        for j in range(2):
 
-            if i == 0:
+            if j == 0:
                 action = 'attacking'
             else:
                 action = 'defending'

@@ -1,14 +1,26 @@
 from generateDualTypesFromBaseTypes import get_dual_types
 from loadSingleTypeJSON import load_json
 import json
-import dataclasses
+from dataclasses import dataclass, asdict
 
 
 def create_dual_type_json(dual_types):
     for type in dual_types:
-        y = dataclasses.asdict(dual_types)
-    #y = json.dumps(dual_types)
+        y = asdict(type)
+        json_object = json.dumps(y)
 
+        filename = type._type1name
+
+        if type._type2name != '':
+            filename += '_' + type._type2name
+
+        filename += '.json'
+
+        path = "./data/typesJSON/dualTypes/"
+
+        with open(path + filename, "w") as outfile:
+            outfile.write(json_object)
+        pass
     pass
 
 

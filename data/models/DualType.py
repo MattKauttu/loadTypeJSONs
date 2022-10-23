@@ -1,9 +1,9 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from models.TypeRelationships import Relationships
 
 
 @dataclass
 class DualType:
     _type1name: str
-    type2name: str
-    defenses: Relationships
+    _defenses: Relationships
+    _type2name: str = ""

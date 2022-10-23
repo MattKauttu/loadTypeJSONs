@@ -4,7 +4,7 @@ class BaseType:
     # name
     # defenses relationships
     #     dictionary
-    #         type: dmgModifier
+    #         type - dmgModifier
 
     def __init__(self, name, attacking, defending):
         self.name = name

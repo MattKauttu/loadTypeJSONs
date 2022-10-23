@@ -1,5 +1,6 @@
-from models.DualType import DualType
 from itertools import permutations
+
+from models.DualType import DualType
 from models.TypeRelationships import Relationships
 
 
@@ -29,9 +30,29 @@ def calculate_defenses(permutation):
 
 
 def generate_dual_type(permutation):
-    dual_type = DualType(type1name=permutation[0].name, type2name=permutation[1].name, defenses=None)
+    dual_type = DualType(_type1name=permutation[0].name, _type2name=permutation[1].name, _defenses=Relationships(
+                                                                                                       normal=-1,
+                                                                                                       fire=-1,
+                                                                                                       water=-1,
+                                                                                                       electric=-1,
+                                                                                                       grass=-1,
+                                                                                                       ice=-1,
+                                                                                                       fighting=-1,
+                                                                                                       poison=-1,
+                                                                                                       ground=-1,
+                                                                                                       flying=-1,
+                                                                                                       psychic=-1,
+                                                                                                       bug=-1,
+                                                                                                       rock=-1,
+                                                                                                       ghost=-1,
+                                                                                                       dragon=-1,
+                                                                                                       dark=-1,
+                                                                                                       steel=-1,
+                                                                                                       fairy=-1
+                                                                                                   )
+                         )
 
-    dual_type.defenses = calculate_defenses(permutation)
+    dual_type._defenses = calculate_defenses(permutation)
 
     return dual_type
 
@@ -51,7 +72,7 @@ def get_dual_types(base_types):
 
     for permutation in type_permutations:
         if len(permutation) == 1:
-            dual_type = DualType(type1name=permutation[0].name, type2name=None, defenses=permutation[0].defending)
+            dual_type = DualType(_type1name=permutation[0].name, _type2name='', _defenses=permutation[0].defending)
         else:
             dual_type = generate_dual_type(permutation)
 
