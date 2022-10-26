@@ -1,0 +1,1 @@
+{"_type1name": "poison", "_defenses": {"normal": 1, "fire": 1, "water": 2, "electric": 0, "grass": 1.0, "ice": 2, "fighting": 0.5, "poison": 0.25, "ground": 2, "flying": 1, "psychic": 2, "bug": 0.5, "rock": 0.5, "ghost": 1, "dragon": 1, "dark": 1, "steel": 1, "fairy": 0.5}, "_type2name": "ground"}
